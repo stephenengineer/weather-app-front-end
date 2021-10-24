@@ -1,38 +1,74 @@
-.App {
-  text-align: center;
-}
-
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
-}
-
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+html {
   display: flex;
   flex-direction: column;
-  align-items: center;
+  height: 100%;
   justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
 }
 
-.App-link {
-  color: #61dafb;
+.cardGroup {
+  display: flex;
+  border-radius: 4px;
+  overflow: hidden;
+  justify-content: center;
+  align-self: center;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.cardGroup_card {
+  flex: 1 1 0%;
+  border: none;
+  border-radius: 0;
+}
+
+.cardGroup_card + .cardGroup_card {
+  border-left: hidden;
+  border-right: hidden;
+}
+
+.cardGroup_card:last-child {
+  border-right: 1px solid #cad0d2;
+}
+
+.card {
+  display: flex;
+  flex-direction: column;
+  border: 1px solid #cad0d2;
+  border-radius: 4px;
+  overflow: hidden;
+}
+
+.card_description {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 15px 0;
+}
+
+.card_descriptionText {
+  font-size: 12px;
+  font-weight: 700;
+  text-align: center;
+  max-width: calc(100% - 30px);
+}
+
+.card_descriptionIcon {
+  font-size: 32px;
+  margin-bottom: 10px;
+}
+
+.card_temperatures {
+  display: flex;
+  font-size: 12px;
+  font-weight: 700;
+  text-align: center;
+  padding: 5px 15px;
+  justify-content: space-around;
+}
+
+.card-fixedWidth {
+  max-width: 120px;
+}
+
+.grayText {
+  color: #57727c;
 }
